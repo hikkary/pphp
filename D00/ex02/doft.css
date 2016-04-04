@@ -1,0 +1,163 @@
+.top{
+	width: 1600px;
+	height: 130px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #909090; 
+	box-shadow: 5px 8px 12px #000;
+	border-radius: 10px;
+}
+
+.opt{
+	margin-left: 1150px;
+	position: absolute;
+	display: inline-block;
+}
+
+.ikea {
+	width: 90px;
+	height: 150px;
+
+	z-index: 30;
+	margin-left: 610px;
+	margin-top: 470px;
+	position: absolute;
+v
+	 
+}
+.apple {
+	width: 220px;
+	height: 150px;
+
+	z-index: 15;
+	margin-left: 1150px;
+	margin-top: 460px;
+	position: absolute;
+	 display: inline-block;
+}
+.search{
+	width: 75%;
+	margin-left: 10px;
+}
+
+a{
+	font-size: 20px;
+	padding-left: 6px;
+
+}
+.content{
+
+	width: 1600px;
+	height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+}
+
+.gigant{
+	font-size: 50px;
+}
+
+.icon{
+	width: 80px;
+	height: 80px;
+	margin-right: 10px;
+	margin-left: 30px;
+	margin-top: 10px;
+	float: left;
+}
+
+.right{
+	width: 140px;
+	height: 500px;
+	background-color: #909090; 
+	box-shadow: 5px 8px 12px #000;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-left: 1250px;
+	position: absolute;
+	display: inline-block;
+}
+
+.sbar{
+	width: 140px;
+	height: 500px;
+	background-color: #909090; 
+	box-shadow: 5px 8px 12px #000;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-left: 50px; 
+	display: inline-block;
+}
+
+.cluster{
+	position: absolute;
+	padding: 0px;
+	margin-left: 20px;
+	margin-top: 30px; 
+	display: inline-block;
+	border-radius: 10px;
+	border : 10px #909090 solid;
+	z-index: 5;
+}
+
+.brick{
+	height: 70px;
+	width: 100px;
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto; 
+	background-image:url("resources/brick.jpg"); 
+	}
+
+.vert{ 
+	width: 500px;
+	height: 200px;
+	margin-top: 650px;
+	background-color: #77ff77;
+	display: inline-block;
+	z-index: 10;
+	position: absolute;
+	border-radius: 10px;
+	box-shadow: 5px 8px 12px #000;
+}
+
+#c{
+	}
+
+#d42{
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 30px;
+}
+
+#oeil{
+	border : 6px red solid;
+}
+
+#ash #main{
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+#reload{
+	padding-top:10px; 
+	padding-right: 10px;
+	float: right;
+	padding-bottom: 120px;
+	width: 20px;
+	height: 20px;
+}
+#croix{
+	padding-top:110px;
+	position: absolute;  
+	float: right; 
+
+
+}
+#loupe{
+	margin-left: 900px;
+	position: absolute;
+
+}
+
