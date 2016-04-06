@@ -4,10 +4,18 @@ unset($argv[0]);
 
 function ft_split($str)
 {
-	$tab = preg_split("/ +/",$str);
-	sort($tab);
-	return $tab;
+	$i = 0;
+	$tab = explode(" ",$str);
+	foreach ($tab as $key => $elem) 
+	{
+		if(!$elem)
+			unset($tab[$key]);
+		else
+			$tab2[$i++] = $tab[$key]; 
+	}
+	return $tab2;
 }
+
 $final = array(""); 
 sort($argv);
 
