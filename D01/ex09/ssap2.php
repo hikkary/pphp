@@ -34,7 +34,10 @@ foreach ($final as $elem)
 	if(ctype_alpha($elem))
 		$alpha = array_merge($alpha,$tmp2);
 	elseif(ctype_digit($elem))
+	{
 		$digit = array_merge($digit,$tmp2);
+		array_multisort($digit, SORT_ASC, SORT_STRING);
+	}
 	else
 		$other = array_merge($other,$tmp2);
 }
