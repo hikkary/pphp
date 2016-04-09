@@ -13,11 +13,8 @@ if ($_POST['submit'] === 'OK')
 		$tab = array('login' => $_POST['login'] , 'passwd' => $_POST['passwd']);
 		$check = file_get_contents('../private/passwd');
 		$check2 = unserialize($check);
-		print_r($check2);
 		foreach ($check2 as $c2) 
 		 {
-		 		echo $tab['login']."\n";
-		 		echo $c2['login']."\n";
 			 	if ($tab['login'] === $c2['login'])
 			 	{
 			 		echo 'ERROR';
