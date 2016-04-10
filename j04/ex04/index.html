@@ -1,0 +1,20 @@
+<!-- la page d’accueil index.html propose un formulaire pour se connecter au chat
+(le formulaire a pour action login.php, en méthode POST, modifiez login.php en
+conséquence), mais aussi un lien pour créer son compte (create.html) et un pour
+modifier son mot de passe (modif.html). -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>42 Chat</title>
+</head>
+<body>
+<h1>Connectez-Vous</h1>
+<form action="login.php" method="post">
+<input type="text" name="login" ></input>
+<input type="password" name="passwd"></input>
+<input type="submit" name="submit"/>
+<h1>Pas encore Inscrit ?  <a href="create.html"> Inscrivez-Vous</a></h1><br/>
+<h1>Mot de passe oubli&eacute;  <a href="modif.html"> Cliquez ici</a></h1>
+</form>
+</body>
+</html>
