@@ -1,6 +1,5 @@
 <?php
-
-//header('Location: index.html');
+header('Location: index.html');
 if($_POST['login'] == "" | $_POST['passwd'] == "" | $_POST['submit'] !== 'OK')
 {	
 	echo "ERROR";
@@ -20,7 +19,6 @@ if($_POST['login'] == "" | $_POST['passwd'] == "" | $_POST['submit'] !== 'OK')
 			 		echo 'ERROR';
 			 		return (-1);
 			 	}
-		
 		 }
 		 $check2[] = $tab;
 		 $check = serialize($check2);

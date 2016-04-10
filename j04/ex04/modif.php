@@ -1,5 +1,5 @@
 <?php
-
+header('Location: index.html');
 if (!file_exists('../private/passwd') || !$_POST['login'] || !$_POST['oldpw'] ||  !$_POST['newpw'] || $_POST['submit'] !== 'OK')
 {
 	echo "ERROR\n";
