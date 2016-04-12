@@ -1,3 +1,3 @@
-SELECT FLOOR(AVG(nbr_siege)) 
+SELECT ROUND(AVG(nbr_siege)) 
 AS moyenne 
 FROM salle;
