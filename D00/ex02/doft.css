@@ -1,9 +1,12 @@
+body{
+	background-color: #505050;
+}
 .top{
 	width: 1600px;
 	height: 130px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #909090; 
+	background-color: #909090;
 	box-shadow: 5px 8px 12px #000;
 	border-radius: 10px;
 }
@@ -23,7 +26,7 @@
 	margin-top: 470px;
 	position: absolute;
 v
-	 
+
 }
 .apple {
 	width: 220px;
@@ -49,13 +52,15 @@ a{
 
 	width: 1600px;
 	height: 800px;
+	padding-top: 0px;
+	margin-top: -44px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 10px;
 }
 
 .gigant{
-	font-size: 50px;
+	font-size: 40px;
 }
 
 .icon{
@@ -70,10 +75,10 @@ a{
 .right{
 	width: 140px;
 	height: 500px;
-	background-color: #909090; 
+	background-color: #909090;
 	box-shadow: 5px 8px 12px #000;
 	border-radius: 10px;
-	margin-top: 20px;
+	margin-top: 0px;
 	margin-left: 1250px;
 	position: absolute;
 	display: inline-block;
@@ -82,23 +87,25 @@ a{
 .sbar{
 	width: 140px;
 	height: 500px;
-	background-color: #909090; 
+	background-color: #909090;
 	box-shadow: 5px 8px 12px #000;
 	border-radius: 10px;
-	margin-top: 20px;
-	margin-left: 50px; 
+	margin-top: 0px;
+	margin-left: 50px;
 	display: inline-block;
 }
 
 .cluster{
 	position: absolute;
 	padding: 0px;
-	margin-left: 20px;
-	margin-top: 30px; 
+	margin-left: 25px;
+	margin-top: 0px;
 	display: inline-block;
 	border-radius: 10px;
 	border : 10px #909090 solid;
 	z-index: 5;
+	border-radius: 10px;
+	box-shadow: 5px 8px 12px #000;
 }
 
 .brick{
@@ -106,13 +113,13 @@ a{
 	width: 100px;
 	margin-top: 200px;
 	margin-left: auto;
-	margin-right: auto; 
-	background-image:url("resources/brick.jpg"); 
+	margin-right: auto;
+	background-image:url("resources/brick.jpg");
 	}
 
-.vert{ 
-	width: 500px;
-	height: 200px;
+.vert{
+	width: 550px;
+	height: 170px;
 	margin-top: 650px;
 	background-color: #77ff77;
 	display: inline-block;
@@ -122,8 +129,9 @@ a{
 	box-shadow: 5px 8px 12px #000;
 }
 
-#c{
-	}
+.ordi{
+	text-shadow: 5px 8px 12px #FF0000;
+}
 
 #d42{
 	padding-top: 5px;
@@ -141,7 +149,7 @@ a{
 }
 
 #reload{
-	padding-top:10px; 
+	padding-top:10px;
 	padding-right: 10px;
 	float: right;
 	padding-bottom: 120px;
@@ -150,8 +158,8 @@ a{
 }
 #croix{
 	padding-top:110px;
-	position: absolute;  
-	float: right; 
+	position: absolute;
+	float: right;
 
 
 }
@@ -160,4 +168,3 @@ a{
 	position: absolute;
 
 }
-
