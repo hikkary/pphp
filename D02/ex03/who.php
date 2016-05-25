@@ -14,6 +14,7 @@
 		unset($ace[2]);
 		foreach ($ace as $elem) 
 		{
+			/*rajouter rtrim dans les elem*/
 			echo $elem[user]." ";
 			echo $elem[line]." ";
 			echo date("M j",$elem[time1])." ";
