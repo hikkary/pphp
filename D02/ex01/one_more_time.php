@@ -14,29 +14,29 @@ if(substr_count($argv[1]," ") != 4)
 
 function what_month($m)
 {
-	if ($m = "Janvier")
+	if ($m === "Janvier")
 		return(1);
-	if ($m = "Fevrier")
+	if ($m === "Fevrier")
 		return(2);
-	if ($m = "Mars")
+	if ($m === "Mars")
 		return(3);
-	if ($m = "Avril")
+	if ($m === "Avril")
 		return(4);
-	if ($m = "Mai")
+	if ($m === "Mai")
 		return(5);
-	if ($m = "Juin")
+	if ($m === "Juin")
 		return(6);
-	if ($m = "Juillet")
+	if ($m === "Juillet")
 		return(7);
-	if ($m = "Aout")
+	if ($m === "Aout")
 		return(8);
-	if ($m = "Septembre")
+	if ($m === "Septembre")
 		return(9);
-	if ($m = "Octobre")
+	if ($m === "Octobre")
 		return(10);
-	if ($m = "Novembre")
+	if ($m === "Novembre")
 		return(11);
-	if ($m = "Decembre")
+	if ($m === "Decembre")
 		return(12);
 }
 
@@ -72,6 +72,7 @@ if (preg_match("/^Janvier|Fevrier|Mars|Avril|Mai|Juin|Juillet|Aout|Septembre|Oct
 	$m = substr($argv[1], 0,strpos($argv[1]," "));
 	$mc = what_month($m);
 	echo $m."\n";
+	echo $mc."\n";
 	$argv[1] = substr($argv[1],strpos($argv[1]," "));
 	$argv[1] = trim($argv[1]);
 }
@@ -111,5 +112,6 @@ else
 	echo "Wrong Format";
 	return;
 }
+date_default_timezone_set("Europe/Paris");
 echo strtotime("$mc/$d/$y $h");
 ?>
