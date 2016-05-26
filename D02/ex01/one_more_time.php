@@ -44,7 +44,6 @@ function what_month($m)
 if (preg_match("/^Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi|Dimanche/", $argv[1]))
 {
 	$day = substr($argv[1], 0,strpos($argv[1]," "));
-	echo $day."\n";
 	$argv[1] = substr($argv[1],strpos($argv[1]," "));
 	$argv[1] = trim($argv[1]);
 }
@@ -57,7 +56,6 @@ else
 if (preg_match("/^[0-31]/", $argv[1]))
 {
 	$d = substr($argv[1], 0,strpos($argv[1]," "));
-	echo $d."\n";
 	$argv[1] = substr($argv[1],strpos($argv[1]," "));
 	$argv[1] = trim($argv[1]);
 }
@@ -71,8 +69,6 @@ if (preg_match("/^Janvier|Fevrier|Mars|Avril|Mai|Juin|Juillet|Aout|Septembre|Oct
 {
 	$m = substr($argv[1], 0,strpos($argv[1]," "));
 	$mc = what_month($m);
-	echo $m."\n";
-	echo $mc."\n";
 	$argv[1] = substr($argv[1],strpos($argv[1]," "));
 	$argv[1] = trim($argv[1]);
 }
@@ -90,7 +86,6 @@ if (preg_match("/^[0-9]{4}/", $argv[1]))
 		echo "Wrong Format";
 		return;
 	}
-	echo $y."\n";
 	$argv[1] = substr($argv[1],strpos($argv[1]," "));
 	$argv[1] = trim($argv[1]);
 }
@@ -103,7 +98,6 @@ else
 if (preg_match("/[0-2][0-9]:[0-5][0-9]:[0-5][0-9]/", $argv[1]))
 {
 	$h = substr($argv[1], 0);
-	echo $h."\n";
 	$argv[1] = substr($argv[1],strpos($argv[1]," "));
 	$argv[1] = trim($argv[1]);
 }

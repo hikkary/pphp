@@ -1,5 +1,13 @@
 #!/usr/bin/php
 <?php
+	function cmp($a, $b)
+	{
+		if ($a == $b) {
+	        return 0;
+	    }
+	    return ($a < $b) ? -1 : 1;
+	}
+
 	$fp = fopen("/var/run/utmpx", "r");
 	$ace = array("");
 	date_default_timezone_set('Europe/Paris');
@@ -12,13 +20,13 @@
 		unset($ace[0]);
 		unset($ace[1]);
 		unset($ace[2]);
-		foreach ($ace as $elem) 
+		usort($ace, "cmp");
+		foreach ($ace as $elem)
 		{
-			/*rajouter rtrim dans les elem*/
-			echo $elem[user]." ";
-			echo $elem[line]." ";
-			echo date("M j",$elem[time1])." ";
-			echo date("H:i",$elem[time1])." ";
+			echo rtrim($elem['user']." ");
+			echo " ".rtrim($elem['line']);
+			echo " ".date("M j",$elem['time1'])." ";
+			echo date("H:i",$elem['time1']);
 			echo "\n";
 		}
 ?>
