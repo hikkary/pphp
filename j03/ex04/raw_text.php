@@ -1,4 +1,4 @@
 <?php
-	header('Location: raw_text.php')	
+header('Content-Type: text/plain');
 ?>
 <html><body>Hello</body></html>
