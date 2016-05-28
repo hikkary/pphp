@@ -2,11 +2,11 @@
 	if ($_SERVER['PHP_AUTH_USER'] == "zaz" && $_SERVER['PHP_AUTH_PW'] == "jaimelespetitsponeys")
 	{
 		header('Location: members_only.php');
-		$data = file_get_contents("../ex05/img/42.png");
+		$data = file_get_contents("../img/42.png");
 		$base64 = 'data:image/' . ';base64,' . base64_encode($data);
-		echo 
+		echo
 "<html><body>
-Bonjour Zaz<br /> 
+Bonjour Zaz<br />
 <img src='$base64'>
 </body></html>\n";
 }
