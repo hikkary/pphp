@@ -18,20 +18,20 @@ top.frames['chat'].location = 'chat.php';</script>
 </html>";
 echo "Login : ";
 echo $_SESSION['loggued_on_user'];
-if (file_exists('/tmp/private') === FALSE)
-	mkdir("/tmp/private");
-if (!file_exists('/tmp/private/chat'))
-	file_put_contents('/tmp/private/chat', NULL);
+if (file_exists('../private') === FALSE)
+	mkdir("../private");
+if (!file_exists('../private/chat'))
+	file_put_contents('../private/chat', NULL);
 if ($_POST)
 {
-	$stock = unserialize(file_get_contents('/tmp/private/chat'));
+	$stock = unserialize(file_get_contents('../private/chat'));
 	$tab = ['login' => $_SESSION['loggued_on_user'], 'time' => time(),
 	'msg' => $_POST['msg']];
 	$stock[] = $tab;
-	$handle = fopen("/tmp/private/chat", "w");
+	$handle = fopen("../private/chat", "w");
 	if (flock($handle, LOCK_UN))
 		flock($handle, LOCK_EX);
-	file_put_contents('/tmp/private/chat', serialize($stock));
+	file_put_contents('../private/chat', serialize($stock));
 	fclose($handle);
 }
 ?>
