@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Balloon</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+	function bigger(balloon){
+		var plus;
+		plus =  parseInt(balloon.style.width);
+		if (plus >= 420)
+			plus = 190;
+		plus = plus + 10 +"px";
+		
+		balloon.style.width = plus;
+		balloon.style.height = plus;
+	}
+
+	function smaller(balloon){
+		var plus;
+		plus =  parseInt(balloon.style.width);
+		if (plus <= 200)
+			plus = 205;
+		plus = plus - 5 +"px";
+
+		balloon.style.width = plus;	
+		balloon.style.height = plus;
+		
+	}
+
+	function change(){
+		var balloon;
+		balloon = document.getElementById('ballon');
+		var color;	
+		if (balloon.style.backgroundColor == "red")
+		{
+			balloon.style.backgroundColor = "green";
+			bigger(balloon);
+			return;
+		}
+		if (balloon.style.backgroundColor =="green")
+		{
+			balloon.style.backgroundColor ="blue";
+			bigger(balloon);
+			return;
+		}
+		if (balloon.style.backgroundColor ="blue")
+		{
+			balloon.style.backgroundColor ="red";
+			bigger(balloon);
+			return;
+		}
+}
+		function out1()
+		{
+			var balloon;
+		balloon = document.getElementById('ballon');
+		var color;	
+		if (balloon.style.backgroundColor == "red")
+		{
+			balloon.style.backgroundColor = "blue";
+			smaller(balloon);
+			return;
+		}
+		if (balloon.style.backgroundColor =="green")
+		{
+			balloon.style.backgroundColor ="red";
+			smaller(balloon);
+			return;
+		}
+		if (balloon.style.backgroundColor ="blue")
+		{
+			balloon.style.backgroundColor ="green";
+			smaller(balloon);
+			return;
+		}
+		}
+
+</script>
+
+<div id="ballon" onclick="change()" onmouseout="out1()" style="background-color: red; width: 200px; height: 200px;border-radius: 300px; margin-left: auto;margin-right: auto;margin-top: 30%;
+">
+</div>
+</html>
