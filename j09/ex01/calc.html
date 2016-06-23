@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html style="background-color: #66ff66;">
+<head>
+	<title>It's Over 9000</title>
+</head>
+<body onload="useme()">
+<script>
+
+	function use()
+	{
+		alert('Please, use me...');
+	}
+
+	function useme()
+	{	
+		setInterval("use()", 30000); 
+	}
+
+	function ov9000(){
+		console.log("It\'s over 9000!");
+		alert("It\'s over 9000!");
+	}
+
+	function calcul()
+	{
+		var g = document.getElementById('g').value ;
+		var ope = document.getElementById('ope').value;
+		var d = document.getElementById('d').value;
+
+		if(!Number.isInteger(Number(g)) || !Number.isInteger(Number(d))
+			|| Number(g) < 0 || Number(d) < 0) 
+		{
+			alert('Error :(');
+			return ;
+		}
+
+		if(ope === "+")
+			result = Number(g) + Number(d);
+		if(ope === "-")
+			result = Number(g) - Number(d);
+		if(ope === "*")
+			result = Number(g) * Number(d); 
+		if(ope === "/")
+		{
+			if(Number(d) === 0)
+			{
+				ov9000();
+				return;
+			}
+
+			result = Number(g) / Number(d);
+		}
+		if(ope === "%")
+		{
+			if(Number(d) === 0)
+			{
+				ov9000();
+				return;
+			}
+			result = Number(g) % Number(d); 	 
+		}
+		console.log(result);
+
+		alert(result);
+
+	}
+</script>
+
+
+	<div id="calc" style="  position:relative; width: 300px; height: 400px; background-color:#4dff4d; margin-left: auto; margin-right: auto; margin-top: 400px;">
+	<div id="result" style="  position:absolute; width: 290px; height: 40px; background-color: #66ff66; margin-left: 5px; margin-top: 5px;">
+	<form>
+		<input type="text" id ="g" name="g" style="margin-left: 5px; width:110px">
+		<select id="ope">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+			<option>%</option>
+
+
+
+
+		</select>
+		<input type="text" id="d" name="d" style="margin-left: 5px; width:110px">
+
+		<input onclick="calcul()" type="submit" name="try me !" value="try me ! " style="margin-left: 40%; background-color :#66ff66">
+	</form>
+	
+</div>	
+	
+</div>
+
+</body>
+</html>
