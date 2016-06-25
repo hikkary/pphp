@@ -1,10 +1,26 @@
-	function del(arg)
-	{	
-		list = document.getElementById('ft_list');
-		li = document.getElementById('li');
-		console.log(li);
-		list.removeChild(arg);
+
+var cookie = document.cookie;
+
+if (cookie){
+	list = JSON.parse(document.cookie);
+	var i = 0;
+	for(var i=0; i < list.length; i++){
+		document.wrote(list[i]);
+		i++
 	}
+
+	list = document.createTextNode(list);
+
+	list2 = document.getElementById('ft_list').appendChild(list);
+}
+
+function del(arg)
+{	
+	list = document.getElementById('ft_list');
+	li = document.getElementById('li');
+	console.log(li);
+	list.removeChild(arg);
+}
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -37,7 +53,8 @@ function add() {
 
 	div.setAttribute("onclick",m3);
 	list.insertBefore(div,list.childNodes[0]);
-	console.log(list);
+	document.cookie= JSON.stringify(list);
+	console.log(document.cookie);
 }
 		
 	document.getElementById("add").addEventListener("click",add);
