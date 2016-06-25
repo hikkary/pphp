@@ -1,3 +1,16 @@
+	function del(arg)
+	{	
+		list = document.getElementById('ft_list');
+		li = document.getElementById('li');
+		console.log(li);
+		list.removeChild(arg);
+	}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
 function add() {
 	var list;
 	var message;
@@ -5,17 +18,13 @@ function add() {
 	var lien;
 	var fin_lien;
 
-	 // lien = document.createTextNode('<a href=#>');
-	 // fin_lien = document.createTextNode('</a>');;
-	 //  lien = "<a href='#'>";
-	 // fin_lien = "</a>";
+
 	message = prompt('Please enter a note');
 	if(!message)
 		return;
-	// message = lien + message + fin_lien;
-
+	m2 = message.replace(/ /g,'').replace(/\W/g,'') + getRandomInt(1,200000000);
 	list = document.getElementById('ft_list');
-	div = document.createElement("LI");
+	div = document.createElement("div");
 	message = document.createTextNode(message);
 	div.appendChild(message);
 	div.style.listStyleType = "circle";
@@ -23,28 +32,13 @@ function add() {
 	div.style.fontFamily = "Times New Roman, Times, serif";
 	div.style.fontSize = "20px";
 	div.style.fontStyle = "bold";
+	div.id = m2;
+	m3 = "del("+ m2 + ")"
 
-	// list.appendChild(div);
+	div.setAttribute("onclick",m3);
 	list.insertBefore(div,list.childNodes[0]);
 	console.log(list);
 }
 		
-	function del()
-	{
-		var list2 = document.getElementById("LI");//.getElementByTagName("LI");
-		console.log(list2);
-			for(li in list2)
-			{
-				list2[li].onclick=function(){
-					remove(this);
-				}
-			}
-	}
+	document.getElementById("add").addEventListener("click",add);
 
-
-	setInterval("del()", 300); 
-
-// function delete()
-// {
-	
-// }
